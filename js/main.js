@@ -23,10 +23,10 @@ const photos = [
   { src: "straps.jpg", credit: "Photo — Kseniia Dolgopolova, 2024." },
   { src: "club.jpg", credit: "Photo — Jean-Luc Martin, 2024" },
   { src: "clown.jpg", credit: "Photo — Jean-Luc Martin, 2024." },
-  { src: "bend.jpg", credit: "Photo — Sia Ghatak, 2025" },
-  { src: "base.jpg", credit: "Photo - Sia Ghatak, 2026." },
-   { src: "hoop-foot.png", credit: "Photo — Jean-Luc Martin, 2025." },
-   { src: "acro.jpg", credit: "Photo — Kaiolena Tacazon, 2025." },
+  { src: "bend.jpeg", credit: "Photo — Sia Ghatak, 2025" },
+  { src: "base2.jpg", credit: "Photo - Sia Ghatak, 2026." },
+   { src: "hoop-foot2.png", credit: "Photo — Jean-Luc Martin, 2025." },
+   { src: "acro.jpeg", credit: "Photo — Kaiolena Tacazon, 2025." },
   { src: "rope2.jpg", credit: "Photo — Jean-Luc Martin, 2025." },
 ];
 
