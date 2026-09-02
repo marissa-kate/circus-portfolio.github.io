@@ -17,7 +17,7 @@
 // Any web image works: .jpg .png .webp .svg)
 const photos = [
   { src: "hoop.JPG", credit: "Photo - Jean-Luc Martin, 2025." },
-  { src: "rope again.jpg", credit: "Photo — Jean-Luc Martin, 2025." },
+  { src: "rope again.JPG", credit: "Photo — Jean-Luc Martin, 2025." },
   { src: "rope3.jpg", credit: "Photo — Kseniia Dolgopolova, 2024." },
   { src: "cane.jpg", credit: "Photo — Kseniia Dolgopolova, 2024." },
   { src: "straps.jpg", credit: "Photo — Kseniia Dolgopolova, 2024." },
