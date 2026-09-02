@@ -1,0 +1,609 @@
+/* ============================================================
+   Marissa Shaffer — Circus Portfolio
+   Gallery-white theme. One stylesheet for all four pages.
+   ============================================================ */
+
+:root {
+  --ink: #ffffff;
+  --muted: #6b6b6b;
+  --faint: #9a958c;
+  --line: #171717;
+  --paper: #212121;
+  --accent: #141414;
+  --maxw: 1100px;
+  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.75;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; }
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ---------- Header / navigation ---------- */
+.site-header {
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: rgb(36, 26, 49);
+  backdrop-filter: saturate(180%) blur(8px);
+  z-index: 100;
+  --ink: #ffffff;
+  --muted: #b3a8c4;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 2rem;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+.wordmark {
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.nav-toggle {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-links a:hover { color: var(--ink); }
+
+.nav-links a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+/* ---------- Media dropdown menu ---------- */
+.nav-links .has-dropdown { position: relative; }
+.nav-links .caret { font-size: 0.7em; vertical-align: 0.1em; }
+
+.nav-links .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 150px;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.nav-links .has-dropdown:hover .dropdown,
+.nav-links .has-dropdown:focus-within .dropdown { display: block; }
+
+.nav-links .dropdown li { display: block; }
+.nav-links .dropdown a {
+  display: block;
+  padding: 0.55rem 1.1rem;
+  border-bottom: none;
+  font-size: 0.7rem;
+}
+
+/* ---------- Page scaffolding ---------- */
+main { padding: 0 0 5rem; }
+
+.resume-page{
+  --ink: #000000;
+  --muted: #6b6b6b;
+  --faint: #9a958c;
+  --line: #a2a2a2;
+  --paper: #f0f0f0;
+  --accent: #141414;
+  --maxw: 1100px;
+  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+.page-head {
+  padding: 4.5rem 0 2.5rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin: 0 0 1.1rem;
+}
+
+h1.display {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+h2.section-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  line-height: 1.1;
+  margin: 0 0 1.4rem;
+}
+
+.lede {
+  font-family: var(--serif);
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 34ch;
+  margin: 1.2rem 0 0;
+}
+
+p { margin: 0 0 1.2rem; }
+
+.prose { max-width: 62ch; color: #131313; }
+.prose p { color: #000000; }
+
+.muted { color: var(--muted); }
+
+hr.rule {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 3.5rem 0;
+}
+
+/* ---------- About ---------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-portrait-figure { margin: 0; }
+
+.about-portrait {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  width: 100%;
+  background: #eee;
+}
+
+/* ---------- Contact ---------- */
+.contact-head-row {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.contact-portrait-figure { margin: 0; }
+
+.contact-portrait {
+  width: calc(100% + 50px);
+  height: auto;
+}
+
+/* ---------- Media: photo gallery ----------
+   Justified rows: each photo keeps its own aspect ratio and rows fill
+   the width, so a row may hold three verticals, or a vertical beside a
+   horizontal, etc. js/main.js sets each figure's `--r` (width / height)
+   once the image loads; `--row-h` is the target row height per screen. */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 12px;
+  --row-h: 300px;
+}
+
+.gallery figure {
+  margin: 0;
+  flex-grow: var(--r, 1);
+  flex-basis: calc(var(--r, 1) * var(--row-h));
+}
+
+/* Offset anchor jumps (#photos / #videos) below the sticky header */
+#photos, #videos { scroll-margin-top: 90px; }
+
+/* Photographer credit shown under an image (optional per photo) */
+.photo-credit {
+  margin: 0.4rem 0 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--faint);
+}
+
+/* Soaks up leftover space on the final (partial) row so its photos keep
+   the target height instead of stretching to fill the width. */
+.gallery::after {
+  content: "";
+  flex-grow: 999;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #f0efec;
+}
+
+/* ---------- Media: video embeds ---------- */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  background: #f0efec;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-caption {
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin: 0.7rem 0 0;
+}
+
+/* ---------- Resume ---------- */
+.credit-section { margin-bottom: 2.6rem; }
+
+.credit-section-title {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 1.02rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 1.1rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.resume-list { margin: 0; padding: 0; list-style: none; }
+
+.resume-list li {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.resume-list li:last-child { border-bottom: none; }
+.resume-list .role { color: var(--ink); }
+.resume-list .year { color: var(--faint); white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+/* Bordered-card credit list (title + meta, note, bullets) */
+.credits { margin: 0; padding: 0; list-style: none; }
+.credits-cards { display: flex; flex-direction: column; gap: 1.1rem; }
+.credits-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; }
+
+.credit {
+  border: 1px solid var(--line);
+  padding: 1.5rem 1.7rem;
+}
+.credit-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.2rem;
+  font-style: var(--muted);
+  flex-wrap: wrap;
+}
+.credit-head-stack { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+.credit-head .title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--ink);
+}
+.credit-head .meta {
+  color: #241a31;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.credit-note {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: 0.6rem 0 0;
+  line-height: 1.5;
+}
+.credit-points {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.credit-points li {
+  padding: 0 0 0 0.9rem;
+  position: relative;
+  color: #3a3a3a;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+.credit-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  background: var(--line);
+}
+
+/* Compact contact line + specialty/skill lines */
+.resume-contact {
+  color: var(--muted);
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  margin: 0.9rem 0 0;
+}
+.resume-contact a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+.resume-contact a:hover { border-bottom-color: var(--ink); }
+
+/* Resume header split: main column on the left, Specialties & Skills
+   pinned to the top-right in a slim aside with a hairline divider. */
+.resume-head {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 3.2rem;
+  align-items: start;
+}
+
+.resume-head .eyebrow { color: #6b6559; }
+
+.resume-aside {
+  border-left: 1px solid var(--line);
+  padding-left: 2.4rem;
+}
+
+.spec-group + .spec-group { margin-top: 1.8rem; }
+.spec-group .spec-label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 0.7rem;
+}
+.spec-group ul { list-style: none; margin: 0; padding: 0; }
+.spec-group li {
+  padding: 0.28rem 0;
+  color: #2a2a2a;
+  font-size: 0.98rem;
+  transition: color 0.2s ease;
+}
+.spec-group li:hover { color: #6825ac; }
+
+.btn {
+  display: inline-block;
+  margin-top: 1.6rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 0.85rem 1.6rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.btn:hover { background: var(--ink); color: #fff; }
+
+/* ---------- Contact ---------- */
+.contact-list {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+}
+.contact-list li {
+  border-top: 1px solid var(--line);
+  padding: 1.3rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+.contact-list li:last-child { border-bottom: 1px solid var(--line); }
+.contact-list .label {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.contact-list a {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--ink);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.contact-list a:hover { border-bottom-color: var(--ink); }
+
+/* Contact action buttons (Email / Instagram) */
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.4rem;
+}
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 1.05rem 2rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.contact-btn:hover { background: var(--ink); color: var(--paper); }
+.contact-btn svg { width: 18px; height: 18px; display: block; }
+
+.contact-secondary {
+  margin-top: 1.6rem;
+  font-size: 0.9rem;
+}
+.contact-secondary a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+.contact-secondary a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 2.5rem 0;
+  color: var(--faint);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.site-footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.site-footer a { color: var(--faint); text-decoration: none; }
+.site-footer a:hover { color: var(--ink); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .contact-head-row { grid-template-columns: 1fr; gap: 2rem; }
+  .video-grid { grid-template-columns: 1fr; }
+  .credits-grid { grid-template-columns: 1fr; }
+  .credit-head { flex-direction: column; gap: 0.15rem; }
+  .credit-head .meta { text-align: left; }
+  .resume-head { grid-template-columns: 1fr; gap: 2rem; }
+  .resume-aside {
+    border-left: none;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+    padding-top: 1.6rem;
+  }
+}
+
+@media (max-width: 700px) {
+  body { font-size: 16px; }
+  .nav { padding: 1.1rem 1.4rem; }
+  .wrap { padding: 0 1.4rem; }
+
+  .nav-toggle { display: block; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 0.5rem 1.4rem 1.2rem;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a {
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.78rem;
+  }
+  .nav-links a[aria-current="page"] { border-bottom-color: var(--line); }
+
+  /* Media submenu: show Photos/Videos inline, indented under Media */
+  .nav-links .dropdown {
+    display: block;
+    position: static;
+    border: none;
+    padding: 0 0 0.4rem 1rem;
+    min-width: 0;
+  }
+  .nav-links .dropdown a {
+    padding: 0.7rem 0;
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+  .nav-links .caret { display: none; }
+
+  .gallery { --row-h: 200px; gap: 8px; }
+}
+
+@media (max-width: 420px) {
+  .gallery { --row-h: 165px; }
+}
