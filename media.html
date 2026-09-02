@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media — Marissa Shaffer</title>
+    <meta name="description" content="Photos and video of Marissa Shaffer's circus and aerial work." />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="wordmark" href="index.html">Marissa Shaffer</a>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">About</a></li>
+          <li class="has-dropdown">
+            <a href="media.html" aria-current="page">Media <span class="caret" aria-hidden="true">▾</span></a>
+            <ul class="dropdown">
+              <li><a href="media.html#photos">Photos</a></li>
+              <li><a href="media.html#videos">Videos</a></li>
+            </ul>
+          </li>
+          <li><a href="resume.html">Résumé/CV</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="wrap">
+        <div class="page-head">
+          <p class="eyebrow">Media</p>
+          <h1 class="display">Photos</h1>
+        </div>
+
+        <!-- Photo gallery — edit the `photos` list in js/main.js -->
+        <section id="photos" aria-label="Photo gallery">
+          <div class="gallery" data-gallery></div>
+        </section>
+
+        <hr class="rule" />
+
+        <!-- Video — edit the `videos` list in js/main.js -->
+        <section id="videos" aria-label="Video">
+          <h2 class="section-title">Videos</h2>
+          <div class="video-grid" data-videos></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>Marissa Shaffer</span>
+        <span>&copy; <span data-year>2026</span> — Circus Artist</span>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
