@@ -34,7 +34,7 @@ const photos = [
 // Example: for https://www.youtube.com/watch?v=dQw4w9WgXcQ
 // the id is "dQw4w9WgXcQ".  Add a short caption for each.
 const videos = [
-  { id: "qavxfTbLBiM", caption: "Performance Demo Reel - 2025" },
+  { id: "A3dBXAqgehc", caption: "Performance Demo Reel - 2026" },
   { id: "c32Us-dXcwk", caption: "Hula Hoop & Clown Act — 2025" },
   { id: "UNc83BKrShM", caption: "Aerial Rope Act — 2025" },
 ];
