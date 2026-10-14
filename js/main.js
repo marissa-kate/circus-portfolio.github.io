@@ -36,7 +36,8 @@ const photos = [
 const videos = [
   { id: "A3dBXAqgehc", caption: "Performance Demo Reel - 2026" },
   { id: "c32Us-dXcwk", caption: "Hula Hoop & Clown Act — 2025" },
-  { id: "UNc83BKrShM", caption: "Aerial Rope Act — 2025" },
+  { id: "UNc83BKrShM", caption: "Aerial Rope Act @ VIVA Fest— 2025" },
+   { id: "eESw3198GpI", caption: "Aerial Rope Act @ Washington County Fair — 2026" }
 ];
 
 /* ------------------------------------------------------------
